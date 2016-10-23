@@ -15,6 +15,10 @@ namespace Quiron.LojaVirtual.Dominio.Repositório
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            /*
+                Rescrito o método abaixo por conta da pluralização que por default
+                mudo de produto para produtos
+            */
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             modelBuilder.Entity<Produto>().ToTable("Produto");
         }
