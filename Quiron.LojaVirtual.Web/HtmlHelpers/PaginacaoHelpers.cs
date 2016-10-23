@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Quiron.LojaVirtual.Web.Models;
+﻿using Quiron.LojaVirtual.Web.Models;
+using System;
 using System.Text;
+using System.Web.Mvc;
 
 namespace Quiron.LojaVirtual.Web.HtmlHelpers
 {
@@ -14,7 +11,7 @@ namespace Quiron.LojaVirtual.Web.HtmlHelpers
         {
             StringBuilder resultado = new StringBuilder();
 
-            for(int i = 1; i < paginacao.TotalDePaginas; i++)
+            for(int i = 1; i <= paginacao.TotalDePaginas; i++)
             {
                 TagBuilder tag = new TagBuilder("a");
                 tag.MergeAttribute("href", paginaurl(i));
