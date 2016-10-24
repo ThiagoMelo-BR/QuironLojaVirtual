@@ -7,7 +7,7 @@ namespace Quiron.LojaVirtual.Web.Controllers
 {
     public class VitrineController : Controller
     {
-        public int ProdutosPorPagina = 5;
+        public int ProdutosPorPagina = 3;
 
         private ProdutoRepositorio _repositorio;
         // GET: Vitrine
