@@ -1,26 +1,35 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Quiron.LojaVirtual.Dominio.Repositório;
+using Quiron.LojaVirtual.Web.Models;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using Quiron.LojaVirtual.Dominio.Repositório;
 
 namespace Quiron.LojaVirtual.Web.Controllers
 {
     public class VitrineController : Controller
     {
-        public int ProdutosPorPagina = 3;
+        public int ProdutosPorPagina = 5;
+
         private ProdutoRepositorio _repositorio;
         // GET: Vitrine
         public ActionResult ListaProdutos(int pagina = 1)
         {
             _repositorio = new ProdutoRepositorio();
 
-            var produtos = _repositorio.Produto.OrderBy(p => p.Descricao)
+            ProdutosViewModel model = new ProdutosViewModel
+            {
+                Produtos = _repositorio.Produto.OrderBy(p => p.Descricao)
                 .Skip((pagina - 1) * ProdutosPorPagina)
-                .Take(ProdutosPorPagina);
+                .Take(ProdutosPorPagina),
 
-            return View(produtos);
+                Paginacao = new Paginacao
+                {
+                    PaginaAtual = pagina,
+                    ItensPorPagina = ProdutosPorPagina,
+                    ItensTotal = _repositorio.Produto.Count()
+                }
+            };
+
+            return View(model);
         }
     }
 }
