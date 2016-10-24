@@ -13,17 +13,53 @@ namespace Quiron.LojaVirtual.Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapRoute(
-                name: null,
-                url: "Pagina{pagina}",
-                defaults: new { controller = "Vitrine", action = "ListaProdutos" }
-                );
+            /*
+                /                  Produtos de todas as categorias
+                /Pagina2           Todas as categorias da pagina 2
+                /Futebol           Primeira página da categoria futebol
+                /Futebol/Pagina2   Página 2 da categoria futebol
+            */
 
-            routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+            //1º
+            routes.MapRoute(null,
+                "",
+                new
+                {
+                    controller = "Vitrine",
+                    action = "ListaProdutos",
+                    categoria = (string)null,
+                    pagina = 1
+                });
+
+            //2º
+
+            routes.MapRoute(null,
+                "Pagina{pagina}",
+                new { controller = "Vitrine",
+                      action = "ListaProdutos",
+                      categoria = (string)null }, 
+                new { pagina = @"\d+" });
+
+            //3º
+            routes.MapRoute(null, "{categoria}", 
+                new{
+                controller = "Vitrine",
+                action = "ListaProdutos",
+                pagina = 1
+            });
+
+            //4º
+            routes.MapRoute(null,
+                "{categoria}Pagina{pagina}",
+                new
+                {
+                    controller = "Vitrine",
+                    action = "ListaProdutos"
+                },
+                new { pagina = @"\d+" });
+
+            //default
+            routes.MapRoute(null, "{controller}/{action}");
         }
     }
 }
