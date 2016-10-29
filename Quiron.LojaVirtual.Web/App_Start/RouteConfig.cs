@@ -20,7 +20,9 @@ namespace Quiron.LojaVirtual.Web
                 /Futebol/Pagina2   Página 2 da categoria futebol
             */
 
+            
             //1º
+            
             routes.MapRoute(null,
                 "",
                 new
@@ -32,7 +34,6 @@ namespace Quiron.LojaVirtual.Web
                 });
 
             //2º
-
             routes.MapRoute(null,
                 "Pagina{pagina}",
                 new { controller = "Vitrine",
@@ -48,18 +49,19 @@ namespace Quiron.LojaVirtual.Web
                 pagina = 1
             });
 
-            //4º
-            routes.MapRoute(null,
-                "{categoria}Pagina{pagina}",
-                new
-                {
-                    controller = "Vitrine",
-                    action = "ListaProdutos"
-                },
-                new { pagina = @"\d+" });
+            //4º                       
+            routes.MapRoute("RotaCompleta", 
+                            "{categoria}/Pagina{pagina}", 
+                new {
+                        controller = "Vitrine",
+                        action = "ListaProdutos"
+                    }, 
+                new {
+                        pagina = @"\d+"
+                    });
 
             //default
-            routes.MapRoute(null, "{controller}/{action}");
+            routes.MapRoute("Default", "{controller}/{action}");
         }
     }
 }

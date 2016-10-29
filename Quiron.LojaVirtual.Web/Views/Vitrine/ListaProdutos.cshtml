@@ -1,0 +1,23 @@
+﻿@using Quiron.LojaVirtual.Web.HtmlHelpers
+@using Quiron.LojaVirtual.Web.Models
+@model Quiron.LojaVirtual.Web.Models.ProdutosViewModel
+    
+
+@foreach (var p in Model.Produtos)
+{
+    /*Verificar por esse código não funcionou    
+        Html.Partial("ProdutoDetalhe", p);
+    */   
+    
+    <div class="well">
+        <h3><strong>@p.Nome</strong></h3>
+        <h5>@p.Descricao</h5>
+        <h3> <span class="pull-right label label-primary"> @p.Preco.ToString("c") </span> </h3>
+    </div>
+    
+}
+
+<div class="btn-group pull-right">
+    @Html.PageLinks(Model.Paginacao, x => Url.Action("ListaProdutos", new { pagina = x }))
+</div>
+
