@@ -27,7 +27,9 @@ namespace Quiron.LojaVirtual.Web.Controllers
                 {
                     PaginaAtual = pagina,
                     ItensPorPagina = ProdutosPorPagina,
-                    ItensTotal = _repositorio.Produto.Count()
+                    ItensTotal = _repositorio.Produto                   
+                    .Where(p => categoria == null || p.Categoria.TrimEnd() == categoria)
+                    .Count()
                 },
 
                 CategoriaAtual = categoria          

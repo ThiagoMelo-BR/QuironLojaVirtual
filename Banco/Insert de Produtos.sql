@@ -1,48 +1,62 @@
-Ôªødelete produto
-go
+delete Produto
 insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
-(1,'Arroz Cristal 5kg','Gr√£os altamente selecionados - at√© 7,5% no m√°ximo de gr√£os quebrados.
-Sele√ß√£o M√°xima que o equipamento pode realizar. O Arroz Cristal possui embalagem de 5kg e 2kg','Cesta B√°sica',12.5)
-go
+(1,'Chuteira Adidas','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Futebol',128.85)
 insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
-(2,'Feij√£o Cristal 2kg','Gr√£os altamente selecionados - at√© 7,5% no m√°ximo de gr√£os quebrados.
-Sele√ß√£o M√°xima que o equipamento pode realizar. O Arroz Cristal possui embalagem de 5kg e 2kg','Cesta B√°sica',18.9)
-go
+(2,'Chuteira Nike','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Futebol',149.50)
 insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
-(3,'Oleo de Soja 900ml','Gr√£os altamente selecionados - at√© 7,5% no m√°ximo de gr√£os quebrados.
-Sele√ß√£o M√°xima que o equipamento pode realizar. O Arroz Cristal possui embalagem de 5kg e 2kg','Cesta B√°sica',17.35)
-go
+(3,'Chuteira ProSocker','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Futebol',345.99)
 insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
-(4,'Bolacha Mabel 500g','Gr√£os altamente selecionados - at√© 7,5% no m√°ximo de gr√£os quebrados.
-Sele√ß√£o M√°xima que o equipamento pode realizar. O Arroz Cristal possui embalagem de 5kg e 2kg','Cesta B√°sica',25.36)
-go
+(4,'Chuteira ProSocker','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Futebol',12.50)
 insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
-(5,'Suco Dell Vale 1 lt.','Gr√£os altamente selecionados - at√© 7,5% no m√°ximo de gr√£os quebrados.
-Sele√ß√£o M√°xima que o equipamento pode realizar. O Arroz Cristal possui embalagem de 5kg e 2kg','Sucos',4.35)
-go
+(5,'Chuteira ProSocker','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Futebol',12.50)
 insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
-(6,'Suco Dell Vale 1 lt.','Gr√£os altamente selecionados - at√© 7,5% no m√°ximo de gr√£os quebrados.
-Sele√ß√£o M√°xima que o equipamento pode realizar. O Arroz Cristal possui embalagem de 5kg e 2kg','Sucos',4.35)
-go
+(6,'Chuteira ProSocker','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Futebol',12.50)
 insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
-(7,'Suco Nectar 1 lt.','Gr√£os altamente selecionados - at√© 7,5% no m√°ximo de gr√£os quebrados.
-Sele√ß√£o M√°xima que o equipamento pode realizar. O Arroz Cristal possui embalagem de 5kg e 2kg','Sucos',4.35)
-go
+(7,'Chuteira ProSocker','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Futebol',12.50)
 insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
-(8,'Iogurte Itamb√© Bandeja 250g','Gr√£os altamente selecionados - at√© 7,5% no m√°ximo de gr√£os quebrados.
-Sele√ß√£o M√°xima que o equipamento pode realizar. O Arroz Cristal possui embalagem de 5kg e 2kg','Iogurtes',1.99)
-go
+(8,'Chuteira ProSocker','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Futebol',12.50)
 insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
-(9,'Iogurte Itamb√© Bandeja 250g','Gr√£os altamente selecionados - at√© 7,5% no m√°ximo de gr√£os quebrados.
-Sele√ß√£o M√°xima que o equipamento pode realizar. O Arroz Cristal possui embalagem de 5kg e 2kg','Iogurtes',1.99)
-go
+(9,'Chuteira ProSocker','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Futebol',12.50)
 insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
-(10,'Iogurte Vigor Bandeja 250g','Gr√£os altamente selecionados - at√© 7,5% no m√°ximo de gr√£os quebrados.
-Sele√ß√£o M√°xima que o equipamento pode realizar. O Arroz Cristal possui embalagem de 5kg e 2kg','Iogurtes',2.99)
+(10,'Chuteira ProSocker','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Futebol',12.50)
 insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
-(11,'Iogurte Vigor Bandeja 250g','Gr√£os altamente selecionados - at√© 7,5% no m√°ximo de gr√£os quebrados.
-Sele√ß√£o M√°xima que o equipamento pode realizar. O Arroz Cristal possui embalagem de 5kg e 2kg','Iogurtes',2.99)
-go
-select * from produto
-
+(20,'Chuteira Adidas','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Futebol',128.85)
+insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
+(21,'Bola de Baskete','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Basket',128.85)
+insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
+(22,'Camisa de Baskete','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Basket',99.99)
+insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
+(23,'Short de Basket','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Basket',99.99)
+insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
+(24,'Toca de NataÁ„o','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','NataÁ„o',99.99)
+insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
+(25,'Toca de NataÁ„o','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','NataÁ„o',99.99)
+insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
+(26,'TÍnis Mizuno','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Atletismo',599.99)
+insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
+(27,'TÍnis Nike','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Atletismo',599.99)
+insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
+(28,'Luva de Box','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Box',78.99)
+insert into produto (ProdutoId, Nome, Descricao, Categoria, Preco) values 
+(29,'Short de Box','A Chuteira Adidas Artilheira FG Campo È a parceira ideal dos boleiros que querem brilhar nos 
+gramados naturais como um verdadeiro craque. Oferece Ûtima traÁ„o e aderÍncia com a bola.','Box',78.99)
 
