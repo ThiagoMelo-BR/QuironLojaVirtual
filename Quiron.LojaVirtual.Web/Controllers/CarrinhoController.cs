@@ -60,5 +60,11 @@ namespace Quiron.LojaVirtual.Web.Controllers
                 ReturUrl = returnUrl
             });
         }
+
+        public PartialViewResult Resumo()
+        {
+            Carrinho carrinho = ObterCarrinho();
+            return PartialView(carrinho);
+        }
     }
 }
