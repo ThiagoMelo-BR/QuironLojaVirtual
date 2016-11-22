@@ -30,6 +30,10 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
         [Display(Name = "Bairro")]
         public string Bairro { get; set; }
 
+        [Required(ErrorMessage = "Informe o estado")]
+        [Display(Name = "Estado")]
+        public string Estado { get; set; }
+
         [EmailAddress(ErrorMessage = "E-mail inválido")]
         [Display(Name = "E-mail")]
         [Required(ErrorMessage = "Informe um e-mail")]
