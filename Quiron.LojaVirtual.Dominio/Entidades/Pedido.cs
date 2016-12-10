@@ -10,6 +10,7 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
     public class Pedido
     {
         [Required(ErrorMessage = "Informe o nome do cliente")]
+        [Display(Name = "Cliente:")]
         public string NomeCliente { get; set; }
 
         [Display(Name = "Cep:")]
@@ -19,23 +20,23 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
         [Display(Name = "Endereço:")]
         public string Endereco { get; set; }
 
-        [Display(Name ="Complemento")]
+        [Display(Name ="Complemento:")]
         public string Complemento { get; set; }
         
         [Required(ErrorMessage = "Informe uma cidade")]
-        [Display(Name = "Cidade")]
+        [Display(Name = "Cidade:")]
         public string Cidade { get; set; }
 
         [Required(ErrorMessage = "Informe o bairro")]
-        [Display(Name = "Bairro")]
+        [Display(Name = "Bairro:")]
         public string Bairro { get; set; }
 
         [Required(ErrorMessage = "Informe o estado")]
-        [Display(Name = "Estado")]
+        [Display(Name = "Estado:")]
         public string Estado { get; set; }
 
         [EmailAddress(ErrorMessage = "E-mail inválido")]
-        [Display(Name = "E-mail")]
+        [Display(Name = "E-mail:")]
         [Required(ErrorMessage = "Informe um e-mail")]
         public string Email { get; set; }
 

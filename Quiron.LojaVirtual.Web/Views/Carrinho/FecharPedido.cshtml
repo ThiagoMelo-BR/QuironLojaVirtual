@@ -12,49 +12,51 @@
     @Html.ValidationSummary()
 
     <h3>Enviar para</h3>
-    <div class="form-group">
-        <label>Nome do Cliente</label>
-        @Html.TextBoxFor(x => x.NomeCliente, new {@class = "form-control" })
-    </div>
 
-    <h3>Dados P/Entrega</h3>
+    foreach (var prop in ViewData.ModelMetadata.Properties)
+    {
         <div class="form-group">
-            <label>Cep</label>
-            @Html.TextBoxFor(x => x.Cep, new { @class = "form-control" })
-        </div>
-
-        <div class="form-group">
-            <label>Endereço</label>
-            @Html.TextBoxFor(x => x.Endereco, new { @class = "form-control" })
-        </div>
-
-        <div class="form-group">
-            <label>Complemento</label>
-            @Html.TextBoxFor(x => x.Complemento, new { @class = "form-control" })
-        </div>
-
-        <div class="form-group">
-            <label>Cidade</label>
-            @Html.TextBoxFor(x => x.Cidade, new { @class = "form-control" })
-        </div>
-
-        <div class="form-group">
-            <label>Bairro</label>
-            @Html.TextBoxFor(x => x.Bairro, new { @class = "form-control" })
-        </div>
-
-        <div class="form-group">
-            <label>Estado</label>
-            @Html.TextBoxFor(x => x.Estado, new { @class = "form-control" })
-        </div>
-
-        <h3>Opções</h3>
-        <div class="checkbox">
-            <label> <input type="checkbox"/> 
-            @Html.EditorFor(x => x.EmbrulhaParaPresente)
-            Embrulhar para presente ?
+            <label>
+                @(prop.DisplayName ?? prop.PropertyName)
             </label>
+
+            @Html.TextBox(prop.PropertyName, null, new { @class = "form-control" })
         </div>
-        <input class="btn btn-primary" type="submit" value="Fechar o pedido"/>
+
+    }
+
+    <input class="btn btn-primary" type="submit" value="Fechar o pedido"/>
+
 }
+<script src = "~/Scripts/jquery-1.10.2.min.js" ></script >
+
+<script>
+    $('#Cep').change(function (e) {
+        //Evitar o metodo post              
+        e.preventDefault();
+
+        $('#Endereco').val('');
+        $('#Bairro').val('');
+        $('#Cidade').val('');
+        $('#Estado').val('');
+
+        var cep = $('#Cep').val().replace("-", "");
+
+        $.getJSON("http://cep.republicavirtual.com.br/web_cep.php?cep=" + cep + "&formato=json", {}, function (data) {
+            if (data.resultado_txt == 'sucesso - cep completo') {
+                
+                $('#Endereco').val(data.tipo_logradouro + " " + data.logradouro);
+                $('#Bairro').val(data.bairro);
+                $('#Cidade').val(data.cidade);
+                $('#Estado').val(data.uf);
+            } 
+            else
+            {
+               
+            }
+        });
+
+    });
+
+</script>
 
