@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
+﻿using System.Net;
 using System.Net.Mail;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace Quiron.LojaVirtual.Dominio.Entidades
 {
@@ -24,8 +20,8 @@ namespace Quiron.LojaVirtual.Dominio.Entidades
                 smtpClient.EnableSsl = _emailConfiguracoes.UsarSsl;
                 smtpClient.Host = _emailConfiguracoes.ServidorSmtp;
                 smtpClient.Port = _emailConfiguracoes.ServidorPorta;
-                smtpClient.UseDefaultCredentials = false;
-                smtpClient.Credentials = new NetworkCredential(_emailConfiguracoes.Usuario, _emailConfiguracoes.ServidorSmtp);
+                smtpClient.UseDefaultCredentials = true;                
+                smtpClient.Credentials = new NetworkCredential(_emailConfiguracoes.Usuario,_emailConfiguracoes.Senha,  _emailConfiguracoes.ServidorSmtp);
 
                 if (_emailConfiguracoes.EscreverArquivo)
                 {
